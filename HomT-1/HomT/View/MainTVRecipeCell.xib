@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="RecipeCell" rowHeight="182" id="zyt-In-WVO" customClass="MainTVRecipeCell" customModule="HomT" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="182"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zyt-In-WVO" id="mih-u2-OY8">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="182"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="crm-Ty-njD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="182"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vba-Gc-cpU">
+                        <rect key="frame" x="0.0" y="137" width="414" height="45"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6u-nO-9Oc" userLabel="TitleLabel">
+                                <rect key="frame" x="8" y="0.0" width="279" height="39"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o82-Ut-ysx" userLabel="FavBtn">
+                                <rect key="frame" x="338" y="7.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KmG-MI-Oda"/>
+                                    <constraint firstAttribute="width" constant="30" id="w9d-XR-EQE"/>
+                                </constraints>
+                                <state key="normal" image="emptyHeart-30x30"/>
+                                <connections>
+                                    <action selector="favBtnPressed:" destination="zyt-In-WVO" eventType="touchUpInside" id="Qrz-oM-WEr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keh-Ce-xss" userLabel="ShareBtn">
+                                <rect key="frame" x="376" y="7.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="A6O-lF-9YD"/>
+                                    <constraint firstAttribute="height" constant="30" id="Gme-2w-coy"/>
+                                </constraints>
+                                <state key="normal" image="share_30x30"/>
+                                <connections>
+                                    <action selector="shareBtnPressed:" destination="zyt-In-WVO" eventType="touchUpInside" id="8sx-jK-0Yy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.42898362225726488" green="0.46885951174199769" blue="0.48321133852005005" alpha="0.66000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="A6u-nO-9Oc" secondAttribute="trailing" constant="127" id="24N-GI-SBi"/>
+                            <constraint firstItem="A6u-nO-9Oc" firstAttribute="leading" secondItem="Vba-Gc-cpU" secondAttribute="leading" constant="8" id="3nV-nt-upV"/>
+                            <constraint firstAttribute="height" constant="45" id="97f-gj-xW3"/>
+                            <constraint firstItem="o82-Ut-ysx" firstAttribute="centerY" secondItem="Keh-Ce-xss" secondAttribute="centerY" id="gDg-ur-C3n"/>
+                            <constraint firstItem="Keh-Ce-xss" firstAttribute="centerY" secondItem="Vba-Gc-cpU" secondAttribute="centerY" id="np7-hz-nnL"/>
+                            <constraint firstAttribute="trailing" secondItem="Keh-Ce-xss" secondAttribute="trailing" constant="8" id="ofy-6E-4DF"/>
+                            <constraint firstAttribute="bottom" secondItem="A6u-nO-9Oc" secondAttribute="bottom" constant="6" id="qTB-SX-ge1"/>
+                            <constraint firstItem="A6u-nO-9Oc" firstAttribute="top" secondItem="Vba-Gc-cpU" secondAttribute="top" id="uyH-0I-WGA"/>
+                            <constraint firstItem="Keh-Ce-xss" firstAttribute="leading" secondItem="o82-Ut-ysx" secondAttribute="trailing" constant="8" id="wa2-mA-0FG"/>
+                        </constraints>
+                    </view>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bE4-zq-sRS">
+                        <rect key="frame" x="157" y="41" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="M1b-l4-tFE"/>
+                            <constraint firstAttribute="height" constant="100" id="sst-xB-zBS"/>
+                        </constraints>
+                        <color key="color" red="0.1647465189" green="0.72679509789999996" blue="0.99326034330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="crm-Ty-njD" firstAttribute="centerX" secondItem="mih-u2-OY8" secondAttribute="centerX" id="AhN-2o-iS6"/>
+                    <constraint firstItem="bE4-zq-sRS" firstAttribute="centerX" secondItem="mih-u2-OY8" secondAttribute="centerX" id="E2o-aF-nb3"/>
+                    <constraint firstItem="crm-Ty-njD" firstAttribute="width" secondItem="mih-u2-OY8" secondAttribute="width" id="GGI-v3-Lgr"/>
+                    <constraint firstItem="bE4-zq-sRS" firstAttribute="centerY" secondItem="mih-u2-OY8" secondAttribute="centerY" id="Ozw-Sb-ePb"/>
+                    <constraint firstAttribute="bottom" secondItem="Vba-Gc-cpU" secondAttribute="bottom" id="Wjp-vU-9BX"/>
+                    <constraint firstItem="crm-Ty-njD" firstAttribute="height" secondItem="mih-u2-OY8" secondAttribute="height" id="edV-wh-a9M"/>
+                    <constraint firstAttribute="trailing" secondItem="Vba-Gc-cpU" secondAttribute="trailing" id="gYG-0l-Fy4"/>
+                    <constraint firstItem="Vba-Gc-cpU" firstAttribute="leading" secondItem="mih-u2-OY8" secondAttribute="leading" id="ud5-sp-6mA"/>
+                    <constraint firstItem="crm-Ty-njD" firstAttribute="centerY" secondItem="mih-u2-OY8" secondAttribute="centerY" id="vIv-RM-rdH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="ActivityIndicator" destination="bE4-zq-sRS" id="Bdv-rk-bLG"/>
+                <outlet property="favBtn" destination="o82-Ut-ysx" id="hKN-nI-nQQ"/>
+                <outlet property="myImageView" destination="crm-Ty-njD" id="DqL-cJ-egZ"/>
+                <outlet property="shareBtn" destination="Keh-Ce-xss" id="5qX-pU-rXp"/>
+                <outlet property="titleLabel" destination="A6u-nO-9Oc" id="VNQ-0b-RHo"/>
+            </connections>
+            <point key="canvasLocation" x="379.71014492753625" y="-46.875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="emptyHeart-30x30" width="30" height="30"/>
+        <image name="share_30x30" width="30" height="30"/>
+    </resources>
+</document>

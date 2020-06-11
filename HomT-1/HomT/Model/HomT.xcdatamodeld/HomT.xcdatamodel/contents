@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19E266" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FavRecipe" representedClassName="FavRecipe" syncable="YES" codeGenerationType="class">
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="image" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="minutes" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="servings" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="url" attributeType="String"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Ingredient"/>
+        <relationship name="instructions" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Instruction"/>
+    </entity>
+    <entity name="Ingredient" representedClassName="Ingredient" syncable="YES" codeGenerationType="class">
+        <attribute name="original" attributeType="String"/>
+        <attribute name="recipeId" optional="YES" attributeType="String"/>
+        <relationship name="favRecipe" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="FavRecipe"/>
+    </entity>
+    <entity name="Instruction" representedClassName="Instruction" syncable="YES" codeGenerationType="class">
+        <attribute name="recipeId" optional="YES" attributeType="String"/>
+        <attribute name="step" attributeType="String"/>
+        <relationship name="favRecipe" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="FavRecipe"/>
+    </entity>
+    <elements>
+        <element name="Instruction" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="FavRecipe" positionX="-54" positionY="-9" width="128" height="178"/>
+        <element name="Ingredient" positionX="-36" positionY="9" width="128" height="88"/>
+    </elements>
+</model>
